@@ -1,0 +1,18 @@
+import { useState } from 'react';
+import './App.css';
+function App() {
+const [text, setText] = useState('');
+return (
+<div className="App" >
+<input
+type="text"
+placeholder="Type something..."
+value={text}
+onChange={(e) => setText(e.target.value)}
+/>
+<h1>{text}</h1>
+<p>Character Count: {text.length}</p>
+</div>
+);
+}
+export default App;
